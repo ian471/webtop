@@ -1,0 +1,86 @@
+:root {
+  --border-color: #dbdbdb;
+  --border-hover-color: #b5b5b5;
+  --background-color: #fff;
+  --highlighted-background-color: #f5f5f5;
+  --text-color: #252525;
+  --danger-color: #803440;
+  --danger-text-color: #fff;
+  --danger-hover-color: #920018;
+  --success-color: #004ba1;
+  --success-text-color: #fff;
+  --success-hover-color: #003c80;
+  --danger-text-background-color: #fde0e6;
+  --success-text-background-color: #effaf3;
+  --border-radius: 0.25rem;
+  --border-width: 1px;
+  --code-text-color: var(--text-color);
+  --code-background-color: var(--highlighted-background-color);
+  --link-color: var(--success-color);
+  --link-visited-color: var(--link-color);
+  --link-hover-color: var(--text-color);
+  --link-active-color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --border-color: #5f6267;
+    --border-hover-color: #9e9e9e;
+    --background-color: #22272e;
+    --highlighted-background-color: #2d333b;
+    --text-color: #adbac7;
+    --danger-color: #770018;
+    --danger-text-color: #fff;
+    --danger-hover-color: #6b0015;
+    --success-color: #0058bd;
+    --success-text-color: #fff;
+    --success-hover-color: #004a9e;
+    --danger-text-background-color: #610013;
+    --success-text-background-color: #01471a;
+    --link-color: #56a5ff;
+  }
+
+  mark {
+    color: inherit;
+    background-color: #3f3f11;
+  }
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+code, kbd, pre, samp {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.log-container {
+  position: relative;
+  /* from holiday.css */
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.log {
+  padding: 0.5rem;
+  resize: vertical;
+  overflow-y: scroll;
+  height: 8em;
+  min-height: 4rem;
+}
+
+.log .scroll-to-end-button {
+  position: absolute;
+  right: calc(0.25rem + 18px);
+  bottom: 0.25rem;
+}
+
+.copy-link input {
+  width: auto;
+  flex: 1;
+}
+.copy-link br {
+  content: "";
+  flex-basis: 100%;
+  height: 0;
+}
